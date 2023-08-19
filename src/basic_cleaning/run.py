@@ -18,7 +18,7 @@ def go(args):
     run.config.update(args)
 
     logger.info("Getting input artifact")
-    local_path = artifact_local_path = run.use_artifact(
+    local_path = run.use_artifact(
         args.input_artifact).file()
 
     df = pd.read_csv(local_path)
